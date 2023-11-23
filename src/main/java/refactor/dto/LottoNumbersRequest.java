@@ -1,0 +1,40 @@
+package refactor.dto;
+
+import java.util.Arrays;
+import java.util.List;
+import refactor.userLotto.LottoNumbers;
+
+public class LottoNumbersRequest {
+    private final String inputLottoNumbers;
+
+    public LottoNumbersRequest(String inputLottoNumbers) {
+        validateInputLottoNumbers(inputLottoNumbers);
+        this.inputLottoNumbers = inputLottoNumbers;
+    }
+
+    private void validateInputLottoNumbers(String inputLottoNumbers) {
+        isNullOrEmpty(inputLottoNumbers);
+        isLottoPattern(inputLottoNumbers);
+    }
+
+    private void isNullOrEmpty(String inputLottoNumbers) {
+        if (inputLottoNumbers == null || inputLottoNumbers.isEmpty()) {
+            throw new IllegalArgumentException("아무것도 입력하지 않았습니다.");
+        }
+    }
+
+    private void isLottoPattern(String inputLottoNumbers) {
+        if (RequestRegex.LOTTO_PATTERN.matcher(inputLottoNumbers).matches()) {
+            return;
+        }
+        throw new IllegalArgumentException("로또 패턴이 아닙니다.");
+    }
+
+    public LottoNumbers toLottoNumbers() {
+        String[] splitInput = inputLottoNumbers.split(",");
+        List<Integer> splitNumbers = Arrays.stream(splitInput)
+                .map(inputNumber -> Integer.parseInt(inputNumber))
+                .toList();
+        return new LottoNumbers(splitNumbers);
+    }
+}
