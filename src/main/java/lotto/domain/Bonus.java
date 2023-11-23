@@ -30,4 +30,8 @@ public class Bonus {
             throw new IllegalArgumentException(ExceptionMessage.SAME_NUMBER_WITH_LOTTO_NUMBER.getErrorDescription());
         }
     }
+
+    public Integer getBonusNumber() {
+        return bonusNumber;
+    }
 }
