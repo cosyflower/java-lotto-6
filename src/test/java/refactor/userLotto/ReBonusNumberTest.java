@@ -1,11 +1,10 @@
-package refactor;
+package refactor.userLotto;
 
 import java.util.Arrays;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import refactor.lottoGenerator.GeneratedLotto;
-import refactor.userLotto.Bonus;
 
 public class ReBonusNumberTest {
     @ParameterizedTest
