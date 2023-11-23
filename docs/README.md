@@ -150,6 +150,15 @@
 5. LottoGame은 LottoTicket, GeneratedLotto를 비교할 수 있다
    - LottoRepository에 저장된 GeneratedLotto들을 가지고 온다
    - 각각의 GeneratedLotto, LottoTicket을 비교해야 한다 
+   
+6. LottoGame은 LottoReceipt를 생성할 수 있다
+    - 결과 : 개수 형태로 저장해야 한다 (EnumMap<> (LotteryResult.class)) 
+    - LottoGame은 각각의 결과를 생성할 수 있다
+    - 결과에 맞게 개수를 추가하면 된다 
+
+7. LottoReceipt를 통해 당첨 금액의 총합을 파악할 수 있다 
+    - 결과 별 당첨 금액과 개수를 곱한다
+    - 각각의 곱한 값들을 합한다 
 
 
 

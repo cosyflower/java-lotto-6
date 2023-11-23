@@ -1,10 +1,21 @@
 package refactor;
 
 import refactor.lotteryResult.LotteryResult;
+import refactor.lotteryResult.LottoReceipt;
 import refactor.lottoGenerator.GeneratedLotto;
+import refactor.lottoGenerator.LottoRepository;
 import refactor.userLotto.LottoTicket;
 
 public class LottoGame {
+    public static LottoReceipt getLottoReceipt(LottoTicket lottoTicket, LottoRepository lottoRepository) {
+        LottoReceipt lottoReceipt = new LottoReceipt();
+        lottoRepository.getGeneratedLottos()
+                .forEach(generatedLotto ->
+                        lottoReceipt.addEachLotteryResult(getLotteryResult(lottoTicket, generatedLotto))
+                );
+        return lottoReceipt;
+    }
+
     // LotteryResult 핵심 로직 (결과를 반환하는 로직)
     public static LotteryResult getLotteryResult(LottoTicket lottoTicket, GeneratedLotto generatedLotto) {
         return LotteryResult.findLotteryResult(lottoTicket, generatedLotto);
