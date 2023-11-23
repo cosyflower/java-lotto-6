@@ -29,6 +29,6 @@ public class BonusRequest {
     }
 
     public Bonus toBonus() {
-        return new Bonus(Integer.parseInt(inputBonus));
+        return new Bonus(Parser.convertStringToNumber(inputBonus));
     }
 }

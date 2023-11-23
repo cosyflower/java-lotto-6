@@ -31,10 +31,6 @@ public class LottoNumbersRequest {
     }
 
     public LottoNumbers toLottoNumbers() {
-        String[] splitInput = inputLottoNumbers.split(",");
-        List<Integer> splitNumbers = Arrays.stream(splitInput)
-                .map(inputNumber -> Integer.parseInt(inputNumber))
-                .toList();
-        return new LottoNumbers(splitNumbers);
+        return new LottoNumbers(Parser.splitInputBySeparator(inputLottoNumbers, ","));
     }
 }
