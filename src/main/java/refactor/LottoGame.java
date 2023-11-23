@@ -1,6 +1,7 @@
 package refactor;
 
 import refactor.lotteryResult.LotteryResult;
+import refactor.lottoGenerator.GeneratedLotto;
 import refactor.userLotto.LottoTicket;
 
 public class LottoGame {

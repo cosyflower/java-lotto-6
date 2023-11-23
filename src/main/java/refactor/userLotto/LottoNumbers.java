@@ -3,7 +3,7 @@ package refactor.userLotto;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.IntStream;
-import refactor.GeneratedLotto;
+import refactor.lottoGenerator.GeneratedLotto;
 
 public class LottoNumbers {
     private static final int START_INCLUSIVE = 0;

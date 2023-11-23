@@ -14,6 +14,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 import refactor.lotteryResult.LotteryResult;
+import refactor.lottoGenerator.GeneratedLotto;
 import refactor.userLotto.Bonus;
 import refactor.userLotto.LottoNumbers;
 import refactor.userLotto.LottoTicket;

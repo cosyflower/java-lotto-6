@@ -1,4 +1,4 @@
-package refactor;
+package refactor.lottoGenerator;
 
 import java.util.ArrayList;
 import java.util.List;
