@@ -1,5 +1,7 @@
 package refactor.userLotto;
 
+import refactor.exception.LottoException;
+
 public class Bonus {
     private final int bonusNumber;
 
@@ -14,7 +16,7 @@ public class Bonus {
 
     private void isValidRange(int bonusNumber) {
         if (isNotInRange(bonusNumber)) {
-            throw new IllegalArgumentException("범위에서 벗어난 보너스 번호입니다.");
+            throw new LottoException("범위에서 벗어난 보너스 번호입니다.");
         }
     }
 

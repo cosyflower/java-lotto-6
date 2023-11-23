@@ -1,5 +1,6 @@
 package refactor.dto;
 
+import refactor.exception.LottoException;
 import refactor.userLotto.Bonus;
 
 public class BonusRequest {
@@ -17,7 +18,7 @@ public class BonusRequest {
 
     private void isNullOrEmpty(String inputBonus) {
         if (inputBonus == null || inputBonus.isEmpty()) {
-            throw new IllegalArgumentException("아무것도 입력하지 않았습니다.");
+            throw new LottoException("아무것도 입력하지 않았습니다.");
         }
     }
 
@@ -25,7 +26,7 @@ public class BonusRequest {
         if (RequestRegex.NUMBER_PATTERN.matcher(inputBonus).matches()) {
             return;
         }
-        throw new IllegalArgumentException("수를 입력하지 않았습니다.");
+        throw new LottoException("수를 입력하지 않았습니다.");
     }
 
     public Bonus toBonus() {
