@@ -14,6 +14,7 @@ public class BonusRequest {
     private void validateInputBonus(String inputBonus) {
         isNullOrEmpty(inputBonus);
         hasNumberPattern(inputBonus);
+        startsWithZero(inputBonus);
     }
 
     private void isNullOrEmpty(String inputBonus) {
@@ -27,6 +28,12 @@ public class BonusRequest {
             return;
         }
         throw new LottoException("수를 입력하지 않았습니다.");
+    }
+
+    private void startsWithZero(String inputBonus) {
+        if (inputBonus.startsWith("0")) {
+            throw new LottoException("0으로 시작하는 수를 입력했습니다.");
+        }
     }
 
     public Bonus toBonus() {
