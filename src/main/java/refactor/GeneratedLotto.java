@@ -2,6 +2,7 @@ package refactor;
 
 import java.util.ArrayList;
 import java.util.List;
+import refactor.userLotto.Bonus;
 
 public class GeneratedLotto {
     // 고쳐야 할 점

@@ -8,6 +8,9 @@ import java.util.stream.Stream;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
+import refactor.userLotto.Bonus;
+import refactor.userLotto.LottoNumbers;
+import refactor.userLotto.LottoTicket;
 
 public class ReLottoTest {
     private static Stream<Arguments> generateLottoTicket() {

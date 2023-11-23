@@ -1,5 +1,7 @@
 package refactor;
 
+import refactor.userLotto.LottoTicket;
+
 public class LottoGame {
     // 일치하는 번호의 수
     public static int compareLotto(LottoTicket lottoTicket, GeneratedLotto generatedLotto) {

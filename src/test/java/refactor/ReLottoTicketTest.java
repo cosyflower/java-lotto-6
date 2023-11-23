@@ -3,6 +3,9 @@ package refactor;
 import java.util.Arrays;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
+import refactor.userLotto.Bonus;
+import refactor.userLotto.LottoNumbers;
+import refactor.userLotto.LottoTicket;
 
 public class ReLottoTicketTest {
     @Test

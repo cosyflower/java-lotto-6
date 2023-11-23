@@ -1,4 +1,4 @@
-package refactor;
+package refactor.userLotto;
 
 public class Bonus {
     private final int bonusNumber;

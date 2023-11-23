@@ -1,4 +1,6 @@
-package refactor;
+package refactor.userLotto;
+
+import refactor.GeneratedLotto;
 
 public class LottoTicket {
     private final LottoNumbers lottoNumbers;
