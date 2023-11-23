@@ -160,5 +160,14 @@
     - 결과 별 당첨 금액과 개수를 곱한다
     - 각각의 곱한 값들을 합한다 
 
+---
+
+```markdown
+LottoGame - LottoReceipt를 형성한다(LottoTicket, LottoRepository)
+    - LottoRepository에 먼저 Lotto를 생성하고 저장한다
+    - LottoTicket과 Repository에 저장된 Lotto를 비교하고 결과를 반영한다 
+    - 당첨 금액을 확인한다 
+```
+
 
 
