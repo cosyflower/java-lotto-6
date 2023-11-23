@@ -5,6 +5,7 @@ import static refactor.lotteryResult.RankValue.FOUR;
 import static refactor.lotteryResult.RankValue.SIX;
 import static refactor.lotteryResult.RankValue.THREE;
 
+import java.util.Arrays;
 import java.util.function.BiPredicate;
 import refactor.GeneratedLotto;
 import refactor.LottoGame;
@@ -23,5 +24,16 @@ public enum LotteryResult {
 
     LotteryResult(BiPredicate<LottoTicket, GeneratedLotto> rule) {
         this.rule = rule;
+    }
+
+    public static LotteryResult findLotteryResult(LottoTicket lottoTicket, GeneratedLotto generatedLotto) {
+        return Arrays.stream(values())
+                .filter(lotteryResult -> lotteryResult.hasAppliedCondition(lottoTicket, generatedLotto))
+                .findFirst()
+                .orElseThrow(IllegalArgumentException::new);
+    }
+
+    private boolean hasAppliedCondition(LottoTicket lottoTicket, GeneratedLotto generatedLotto) {
+        return rule.test(lottoTicket, generatedLotto);
     }
 }
