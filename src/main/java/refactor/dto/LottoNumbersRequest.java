@@ -1,7 +1,5 @@
 package refactor.dto;
 
-import java.util.Arrays;
-import java.util.List;
 import refactor.userLotto.LottoNumbers;
 
 public class LottoNumbersRequest {

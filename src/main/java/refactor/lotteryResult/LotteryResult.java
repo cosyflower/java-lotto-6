@@ -7,8 +7,8 @@ import static refactor.lotteryResult.RankValue.THREE;
 
 import java.util.Arrays;
 import java.util.function.BiPredicate;
-import refactor.lottoGenerator.GeneratedLotto;
 import refactor.LottoGame;
+import refactor.lottoGenerator.GeneratedLotto;
 import refactor.userLotto.LottoTicket;
 
 public enum LotteryResult {
