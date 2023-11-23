@@ -142,5 +142,14 @@
   - 범위는 1 - 45
   - 중복된 수가 존재해서는 안 된다 
 
+4. LottoRepository 생성하기
+  - 조건에 만족하는 Lotto를 RandomGenerator로 부터 전달받는다
+  - LottoRepository에 저장한다 
+  - LottoRepository에서 저장된 GeneratedLotto를 제공 받을 수 있다 
+
+5. LottoGame은 LottoTicket, GeneratedLotto를 비교할 수 있다
+   - LottoRepository에 저장된 GeneratedLotto들을 가지고 온다
+   - 각각의 GeneratedLotto, LottoTicket을 비교해야 한다 
+
 
 
